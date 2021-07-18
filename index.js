@@ -30,8 +30,8 @@ function getAnswer() {
 // Check if number is prime
 function checkPrime(num) {
   for (let i = 2; i * i <= num; i++)
-      if (num % i === 0)
-        return false; 
+    if (num % i === 0)
+      return false; 
   return num > 1;
 }
 
@@ -39,7 +39,7 @@ function checkPrime(num) {
 function Average(numbers) {
   var total = 0;
   for(var i = 0; i < numbers.length; i++) {
-      total += numbers[i];
+    total += numbers[i];
   }
   return total / numbers.length;
 }
@@ -77,7 +77,6 @@ function Person(age, year) {
     } else {
       return 0
     }
-    
   };
 }
 
