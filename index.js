@@ -5,7 +5,7 @@ function getAnswer() {
   personAgeB = document.getElementById('age_of_death_b').value;
   personYearB = document.getElementById('year_of_death_b').value;
 
-  if (personAgeA * personYearA * personAgeB * personYearB > 0) {
+  if ((personYearA - personAgeA) > 0 && (personYearB - personAgeB) > 0) {
     let personA = new Person(personAgeA, personYearA)
     let personB = new Person(personAgeB, personYearB)
     persons = [personA.killed(), personB.killed()]
@@ -18,14 +18,16 @@ function getAnswer() {
     substractionA = personYearA - personAgeA
     substractionB = personYearB - personAgeB
   
-    answer1_value = 'Person A born on Year = ' + personA.dead + ' - '+ personA.born + ' = ' + substractionA + ', number of people killed on year ' + substractionA + ' is ' + personA.killed() + '.'
-    answer2_value = 'Person B born on Year = ' + personB.dead + ' - '+ personB.born + ' = ' + substractionB + ', number of people killed on year ' + substractionB + ' is ' + personB.killed() + '.'
+    answer1_value = 'Person A born on Year = ' + personA.year + ' - '+ personA.age + ' = ' + substractionA + ', number of people killed on year ' + substractionA + ' is ' + personA.killed() + '.'
+    answer2_value = 'Person B born on Year = ' + personB.year + ' - '+ personB.age + ' = ' + substractionB + ', number of people killed on year ' + substractionB + ' is ' + personB.killed() + '.'
     answer3_value = 'So the average is ( ' + personB.killed() + ' + ' + personA.killed() + ')/' + persons.length + ' = ' + average_killed
   
     answer1.innerHTML = answer1_value
     answer2.innerHTML = answer2_value
     answer3.innerHTML = answer3_value
   } else {
+    answer1.innerHTML = ''
+    answer2.innerHTML = ''
     answer3.innerHTML = '-1'
   }
 
@@ -51,8 +53,8 @@ function Average(numbers) {
 
 // Object of person information and how many killed he did at certain age and year
 function Person(age, year) {
-  this.born = age,
-  this.dead = year,
+  this.age = age,
+  this.year = year,
   this.killed = function() {
     numberofyears = year - age;
     numberofkilled = 0;
