@@ -19,5 +19,5 @@ test('average killing', () => {
 
 // Ensure every number throw in can be detected as prime or not
 test('check if number is prime', () => {
-  expect(checkPrime(1)).toEqual(false)
+  expect(checkPrime(13)).toEqual(true)
 })

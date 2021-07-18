@@ -51,7 +51,7 @@ function Average(numbers) {
   return total / numbers.length;
 }
 
-// Object of person information and how many killed he did at certain age and year
+// Object of person information and how many killed did at certain age and year
 function Person(age, year) {
   this.age = age,
   this.year = year,
@@ -82,4 +82,6 @@ function Person(age, year) {
     return numberofkilled;
   };
 }
+
+// For test purpose
 module.exports = { checkPrime, Average, Person };
