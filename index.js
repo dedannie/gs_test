@@ -18,8 +18,8 @@ function getAnswer() {
     substractionA = personYearA - personAgeA
     substractionB = personYearB - personAgeB
   
-    answer1_value = 'Person A born on Year = ' + personA.born + ' - '+ personA.dead + ' = ' + substractionA + ', number of people killed on year ' + substractionA + ' is ' + personA.killed() + '.'
-    answer2_value = 'Person B born on Year = ' + personB.born + ' - '+ personB.dead + ' = ' + substractionB + ', number of people killed on year ' + substractionB + ' is ' + personB.killed() + '.'
+    answer1_value = 'Person A born on Year = ' + personA.dead + ' - '+ personA.born + ' = ' + substractionA + ', number of people killed on year ' + substractionA + ' is ' + personA.killed() + '.'
+    answer2_value = 'Person B born on Year = ' + personB.dead + ' - '+ personB.born + ' = ' + substractionB + ', number of people killed on year ' + substractionB + ' is ' + personB.killed() + '.'
     answer3_value = 'So the average is ( ' + personB.killed() + ' + ' + personA.killed() + ')/' + persons.length + ' = ' + average_killed
   
     answer1.innerHTML = answer1_value
