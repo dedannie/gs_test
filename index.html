@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+  <link href="index.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="index.js"></script>
+  <title>GS Test</title>
+</head>
+<body>
+  <div class="l-t-10">
+    <div>
+      <label>Given</label>
+    </div>
+    <div>
+      <label>Person A: Age of death = </label>
+      <input type="number" id="age_of_death_a">
+      <label>, Year of Death = </label>
+      <input type="number" id="year_of_death_a">
+    </div>
+    <div>
+      <label>Person B: Age of death = </label>
+      <input type="number" id="age_of_death_b">
+      <label>, Year of Death = </label>
+      <input type="number" id="year_of_death_b">
+    </div>
+    <button class="ui button" onclick="getAnswer()">
+      Submit
+    </button>
+    <br />
+    <br />
+    <div>
+      <label>Answer</label>
+    </div>
+    <div id="answer1"></div>
+    <div id="answer2"></div>
+    <div id="answer3"></div>
+  </div>
+  
+</body>
+</html>
