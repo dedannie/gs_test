@@ -46,12 +46,8 @@ function Average(numbers) {
 
 // Object of person information and how many killed did at certain age and year
 function Person(age, year) {
-  if (age < 0) {
-    age = -1;
-  }
-  if (year < 0) {
-    year = -1;
-  }
+  if (age < 0) { age = -1 }
+  if (year < 0) { year = -1 }
   this.age = age,
   this.year = year,
   this.killed = function() {
@@ -61,7 +57,6 @@ function Person(age, year) {
       i = 0;
       while (i < numberofyears) {
         if (i > 1) {
-          
           j = i;
           while (true) {
             isPrime = checkPrime(j)
@@ -72,7 +67,6 @@ function Person(age, year) {
               j++;
             }
           }
-          
         } else {
           numberofkilled += i;
         }
